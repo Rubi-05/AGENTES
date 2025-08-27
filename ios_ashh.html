@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Consultoría & Investigación | Consultores Hervex</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#0b0f14; --panel:#101922; --text:#e6edf3; --muted:#9fb0c3;
+      --primary:#2f81f7; --accent:#00d1b2; --border:#1f2a37; --card:#0f141b;
+    }
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:.8rem 1.2rem;border-radius:10px;background:linear-gradient(90deg,var(--primary),var(--accent));color:#fff;font-weight:600;box-shadow:0 4px 15px rgba(0,0,0,.4);transition:.25s}
+    .btn:hover{opacity:.92;transform:translateY(-1px)}
+    .section{padding:80px 0}
+    .grid{display:grid;gap:20px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;text-align:center;box-shadow:0 6px 20px rgba(0,0,0,.4)}
+    .title{font-size:2.2rem;margin:.4rem 0;text-align:center}
+    .subtitle{text-align:center;color:var(--muted);margin-bottom:2rem}
+
+    /* HERO sin depender de CDN */
+    header.hero{
+      padding:120px 0;
+      background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.65)), 
+                 url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+      color:#fff; position:relative;
+    }
+    header.hero .wrap{text-align:center}
+    header.hero h1{font-size:3rem;margin-bottom:16px;text-shadow:0 3px 8px rgba(0,0,0,.8)}
+    header.hero p{font-size:1.2rem;max-width:700px;margin:0 auto 20px}
+
+    nav{background:rgba(0,0,0,.85);padding:14px 0;position:sticky;top:0;z-index:50}
+    nav .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+    nav .brand{font-weight:800;color:#fff;letter-spacing:1px}
+    nav .links{display:flex;flex-wrap:wrap;gap:12px}
+    nav .links a{color:var(--muted);font-weight:600}
+    nav .links a:hover{color:#fff}
+
+    /* Iconos SVG inline */
+    .icon{width:40px;height:40px;margin:0 auto 12px;display:block;fill:var(--accent)}
+
+    /* Imágenes uniformes */
+    .card img.feature{
+      width:100%; height:220px; object-fit:cover; border-radius:12px;
+      margin-top:12px; border:1px solid var(--border); display:block;
+      background:#0e141c;
+    }
+    @media (max-width:768px){.card img.feature{height:160px}}
+    @media (min-width:1200px){.card img.feature{height:260px}}
+
+    /* Grids responsivos */
+    #servicios .grid{grid-template-columns:repeat(3,1fr)}
+    @media (max-width:1024px){#servicios .grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:640px){#servicios .grid{grid-template-columns:1fr}}
+
+    #metodologia .grid{grid-template-columns:repeat(5,1fr)}
+    @media (max-width:1200px){#metodologia .grid{grid-template-columns:repeat(3,1fr)}}
+    @media (max-width:900px){#metodologia .grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:600px){#metodologia .grid{grid-template-columns:1fr}}
+
+    #riesgos .grid{grid-template-columns:repeat(5,1fr)}
+    @media (max-width:1200px){#riesgos .grid{grid-template-columns:repeat(3,1fr)}}
+    @media (max-width:900px){#riesgos .grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:600px){#riesgos .grid{grid-template-columns:1fr}}
+
+    footer{background:#000;padding:20px;text-align:center;color:#aaa}
+
+    /* Ajustes móviles */
+    @media (max-width:640px){
+      header.hero h1{font-size:2.2rem}
+      header.hero p{font-size:1rem}
+      .btn{padding:.7rem 1rem}
+      .card{padding:18px}
+      .title{font-size:1.8rem}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <span class="brand">PDI HERVEY</span>
+      <div class="links">
+        <a href="#servicios">Servicios</a>
+        <a href="#metodologia">Metodología</a>
+        <a href="#riesgos">Riesgos</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container wrap">
+      <h1>Consultoría & Servicios de Investigación</h1>
+      <p>Agentes de la Policía de Investigación con experiencia real en campo y gabinete. Ofrecemos soluciones confiables basadas en metodologías científicas y estratégicas.</p>
+      <a href="#contacto" class="btn">Solicita una consulta</a>
+    </div>
+  </header>
+
+  <section id="servicios" class="section">
+    <div class="container">
+      <h2 class="title">Nuestros Servicios</h2>
+      <p class="subtitle">Experiencia en investigación, seguridad y análisis técnico</p>
+
+      <div class="grid">
+        <!-- Investigaciones corporativas -->
+        <div class="card">
+          <!-- edificio + escudo -->
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 3h10a1 1 0 0 1 1 1v16H3V3zm3 3h2v2H6V6zm0 4h2v2H6v-2zm0 4h2v2H6v-2zm4-8h2v2h-2V6zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2z"/>
+            <path d="M18 8.5c1.6.9 3.4 1.1 4 1.1v4.2c0 3.2-2.1 5.9-5 6.7-2.9-.8-5-3.5-5-6.7V9.6c.6 0 2.4-.2 4-1.1.9-.5 1.5-1 2-1.6.5.6 1.1 1.1 2 1.6z"/>
+          </svg>
+          <h3>Investigaciones corporativas</h3>
+          <p>Prevención de fraudes, robos y auditorías internas para fortalecer tu empresa.</p>
+          <img class="feature" alt="Investigaciones corporativas"
+               src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1400&auto=format&fit=crop"
+               loading="lazy" referrerpolicy="no-referrer">
+        </div>
+
+        <!-- Investigación criminal -->
+        <div class="card">
+          <!-- martillo -->
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M2 21l7-7 2 2-7 7H2v-2zM14.7 2.3l7 7-3.4 3.4-7-7L14.7 2.3zM11.6 5.4l7 7-2.3 2.3-7-7 2.3-2.3z"/>
+          </svg>
+          <h3>Investigación criminal</h3>
+          <p>Análisis de modus operandi y patrones delictivos. Informes técnicos para la seguridad.</p>
+          <img class="feature" alt="Investigación criminal"
+               src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=1400&auto=format&fit=crop"
+               loading="lazy" referrerpolicy="no-referrer">
+        </div>
+
+        <!-- Localización de personas -->
+        <div class="card">
+          <!-- pin de mapa -->
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/>
+          </svg>
+          <h3>Localización de personas</h3>
+          <p>Búsqueda y rastreo con herramientas de campo y gabinete para resultados precisos.</p>
+          <img class="feature" alt="Localización de personas"
+               src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1400&auto=format&fit=crop"
+               loading="lazy" referrerpolicy="no-referrer">
+        </div>
+
+        <!-- Contrainteligencia -->
+        <div class="card">
+          <!-- escudo -->
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2l8 3v6c0 5-3.8 9.7-8 11-4.2-1.3-8-6-8-11V5l8-3z"/>
+          </svg>
+          <h3>Contrainteligencia</h3>
+          <p>Identificamos vulnerabilidades y diseñamos planes de mitigación personalizados.</p>
+          <img class="feature" alt="Contrainteligencia"
+               src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1400&auto=format&fit=crop"
+               loading="lazy" referrerpolicy="no-referrer">
+        </div>
+
+        <!-- Rastreo telefónico -->
+        <div class="card">
+          <!-- teléfono -->
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.8 22 2 13.2 2 3a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.3.2 2.5.57 3.6.1.35.03.74-.25 1L6.6 10.8z"/>
+          </svg>
+          <h3>Rastreo telefónico</h3>
+          <p>Estudio de comunicaciones y patrones de interacción mediante técnicas digitales.</p>
+          <img class="feature" alt="Rastreo telefónico"
+               src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1400&auto=format&fit=crop"
+               loading="lazy" referrerpolicy="no-referrer">
+        </div>
+
+        <!-- Asesoría legal -->
+        <div class="card">
+          <!-- balanza -->
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3l3 4h-6l3-4zm-6 6l4 7H2l4-7zm12 0l4 7h-8l4-7zM11 20h2v2h-2v-2zM10 18h4v2h-4v-2z"/>
+          </svg>
+          <h3>Asesoría legal</h3>
+          <p>Orientación jurídica sobre técnicas de investigación y resguardo de evidencia.</p>
+          <img class="feature" alt="Asesoría legal"
+               src="https://images.unsplash.com/photo-1555375771-14b2b64c3c55?q=80&w=1400&auto=format&fit=crop"
+               loading="lazy" referrerpolicy="no-referrer">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="metodologia" class="section" style="background:#111827">
+    <div class="container">
+      <h2 class="title">Nuestra Metodología</h2>
+      <p class="subtitle">Aplicamos un proceso científico para garantizar resultados confiables</p>
+      <div class="grid">
+        <div class="card"><svg class="icon" viewBox="0 0 24 24"><path d="M3 4h18v4H3V4zm0 6h18v4H3v-4zm0 6h18v4H3v-4z"/></svg><h4>Paso 1</h4><p>Recolección de datos en fuentes abiertas y análisis de campo.</p></div>
+        <div class="card"><svg class="icon" viewBox="0 0 24 24"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zm-10 10h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg><h4>Paso 2</h4><p>Examen minucioso para identificar patrones y correlaciones.</p></div>
+        <div class="card"><svg class="icon" viewBox="0 0 24 24"><path d="M4 19h16v2H4v-2zM5 4h2v12H5V4zm6 4h2v8h-2V8zm6-3h2v11h-2V5z"/></svg><h4>Paso 3</h4><p>Estadísticas y visualizaciones estratégicas.</p></div>
+        <div class="card"><svg class="icon" viewBox="0 0 24 24"><path d="M4 3h16v14H4V3zm2 16h12v2H6v-2z"/></svg><h4>Paso 4</h4><p>Elaboración de informes técnicos claros y verificables.</p></div>
+        <div class="card"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6-5.5-3-5.5 3 1-6L3 8.9l6-.9 3-6z"/></svg><h4>Paso 5</h4><p>Propuestas y estrategias personalizadas por caso.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="riesgos" class="section">
+    <div class="container">
+      <h2 class="title">Gestión de Riesgos Operativos</h2>
+      <p class="subtitle">Identificamos los factores de riesgo más comunes en tu organización</p>
+      <div class="grid">
+        <div class="card"><svg class="icon" viewBox="0 0 24 24"><path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-4 0-8 2-8 5v3h16v-3c0-3-4-5-8-5z"/></svg><h4>Recursos humanos</h4><p>Evaluamos vulnerabilidades internas y diseñamos programas de integridad.</p></div>
+        <div class="card"><svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16v4H4V4zm0 6h16v4H4v-4zm0 6h16v4H4v-4z"/></svg><h4>Tecnología</h4><p>Auditoría de infraestructuras digitales y procesos de seguridad.</p></div>
+        <div class="card"><svg class="icon" viewBox="0 0 24 24"><path d="M3 21V3h18v18H3zm4-4h10V7H7v10z"/></svg><h4>Infraestructura</h4><p>Revisión de instalaciones y protocolos de protección patrimonial.</p></div>
+        <div class="card"><svg class="icon" viewBox="0 0 24 24"><path d="M3 5h18v2H3V5zm0 6h18v2H3v-2zm0 6h18v2H3v-2z"/></svg><h4>Procesos</h4><p>Auditoría de procedimientos internos para detectar áreas de mejora.</p></div>
+        <div class="card"><svg class="icon" viewBox="0 0 24 24"><path d="M13 3h-2v2H5v2h6v2h2V7h6V5h-6V3zm-6 10c0 2.8 2.2 5 5 5s5-2.2 5-5H7z"/></svg><h4>Regulación</h4><p>Verificación de cumplimiento normativo y legal aplicable.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="section" style="background:#111827">
+    <div class="container">
+      <h2 class="title">Contacto</h2>
+      <p class="subtitle">¿Necesitas una investigación profesional? Estamos listos para ayudarte</p>
+      <p style="text-align:center">Email: hervey.03@gmail.com<br>Teléfono: +52 5536383097</p>
+      <div style="text-align:center;margin-top:20px">
+        <a class="btn" href="https://wa.me/525536383097?text=Hola,%20deseo%20agendar%20una%20consulta%20y%20recibir%20orientaci%C3%B3n%20sobre%20los%20servicios%20de%20investigaci%C3%B3n%20que%20proporcionan.">Escríbenos</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <small>© <span id="year"></span> HERVEY — Consultoría & Servicios de Investigación</small>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
