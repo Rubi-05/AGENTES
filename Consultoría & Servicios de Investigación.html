@@ -7,17 +7,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-    /* ======= Reset & variables ======= */
+
     *{box-sizing:border-box;margin:0;padding:0}
     :root{
       --bg:#0b0f14;
-      --panel:#101922cc;        /* glass */
+      --panel:#101922cc;        
       --text:#e6edf3;
       --muted:#9fb0c3;
       --primary:#2f81f7;
       --accent:#00d1b2;
       --border:#1f2a37;
-      --card:#0f141bcc;         /* glass card */
+      --card:#0f141bcc;      
       --shadow:0 10px 35px rgba(0,0,0,.45), 0 0 0 1px rgba(47,129,247,.06);
     }
     html,body{height:100%}
@@ -35,7 +35,7 @@
     .container{max-width:1200px;margin:0 auto;padding:0 20px}
     .section{padding:90px 0}
 
-    /* ======= Botón ======= */
+
     .btn{
       display:inline-flex;align-items:center;gap:.6rem;
       padding:.9rem 1.2rem;border-radius:12px;
@@ -48,7 +48,7 @@
     .btn:hover{ transform:translateY(-3px) scale(1.02); filter:saturate(1.05); box-shadow:0 18px 42px rgba(0,0,0,.5) }
     .btn i{font-size:1.05rem}
 
-    /* ======= Navbar ======= */
+ 
     nav{
       position:sticky;top:0;z-index:60;
       backdrop-filter: saturate(150%) blur(10px);
@@ -62,18 +62,18 @@
     nav .links a{color:var(--muted);font-weight:700;opacity:.9}
     nav .links a:hover{color:#fff;opacity:1}
 
-    /* ======= HERO (usa tu misma imagen y se ve) ======= */
+   
     header.hero{
       position:relative;min-height:72vh;display:grid;place-items:center;overflow:hidden;color:#fff;
       background:url('https://images.unsplash.com/photo-1598550880863-3dcaefc2aa99?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat fixed;
     }
-    /* overlay más claro para que se vea el fondo */
+ 
     header.hero::after{
       content:"";position:absolute;inset:0;
       background: radial-gradient(circle at 50% 30%, #00000066 0%, #00000099 55%, #000000cc 80%);
       pointer-events:none;
     }
-    /* banda “police line” sin tapar el fondo */
+
     .police-tape{
       position:absolute;left:-6%;right:-6%;top:36%;
       font-weight:900;letter-spacing:.2rem;word-spacing:.6rem;
@@ -87,11 +87,11 @@
     header.hero h1{font-size:clamp(2.2rem,5.2vw,3.6rem);margin-bottom:14px;text-shadow:0 10px 28px rgba(0,0,0,.7)}
     header.hero p{font-size:clamp(1rem,2vw,1.15rem);max-width:800px;margin:0 auto 22px;color:#dfe7ef}
 
-    /* ======= Títulos ======= */
+
     .title{text-align:center;font-size:clamp(1.8rem,3.4vw,2.2rem);margin-bottom:.4rem}
     .subtitle{text-align:center;color:var(--muted);margin-bottom:2.2rem}
 
-    /* ======= Panel glass ======= */
+ 
     .panel{
       background:var(--panel);
       border:1px solid #ffffff14;border-radius:20px;
@@ -101,7 +101,6 @@
       padding:26px;
     }
 
-    /* ======= Grid & Cards (mantengo tus imágenes) ======= */
     .grid{display:grid;gap:22px}
     .card{
       position:relative;background:linear-gradient(180deg, var(--card), #0a1118cc);
@@ -121,7 +120,7 @@
     .card:hover{ transform: translateY(-10px) scale(1.015); box-shadow: 0 24px 60px rgba(0,0,0,.55), 0 0 0 1px rgba(47,129,247,.25) }
     .icon{font-size:42px;margin-bottom:10px;color:var(--accent);filter:drop-shadow(0 6px 18px #00d1b233)}
 
-    /* Respeta TUS imágenes */
+
     .card img.feature{
       width:100%; height:220px; object-fit:cover;
       border-radius:12px; margin-top:14px; border:1px solid var(--border); display:block;
@@ -130,7 +129,6 @@
     }
     .card:hover img.feature{ transform:scale(1.04) }
 
-    /* ======= Responsive de grillas (como el tuyo) ======= */
     #servicios .grid{grid-template-columns:repeat(3,1fr)}
     @media (max-width:1024px){#servicios .grid{grid-template-columns:repeat(2,1fr)}}
     @media (max-width:640px){#servicios .grid{grid-template-columns:1fr}}
@@ -145,14 +143,14 @@
     @media (max-width:900px){#riesgos .grid{grid-template-columns:repeat(2,1fr)}}
     @media (max-width:600px){#riesgos .grid{grid-template-columns:1fr}}
 
-    /* Animación reveal */
+
     @keyframes fadeUp{from{opacity:0; transform: translateY(18px)} to{opacity:1; transform:none}}
     .reveal{opacity:0; transform:translateY(18px)}
     .reveal.in{opacity:1; transform:none; animation:fadeUp .7s ease both}
 
     footer{background:#000;padding:24px;text-align:center;color:#aab2bd}
 
-    /* Móviles */
+
     @media (max-width:640px){ .section{padding:70px 0} .btn{padding:.8rem 1rem} }
     @media (max-width:768px){ .card img.feature{height:170px} }
     @media (min-width:1200px){ .card img.feature{height:250px} }
@@ -313,3 +311,4 @@
   </script>
 </body>
 </html>
+</head>
